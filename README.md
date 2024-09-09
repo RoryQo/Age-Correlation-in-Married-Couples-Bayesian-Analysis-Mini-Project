@@ -4,7 +4,8 @@ Using age data from 100 sampled U.S. married couples, hypothesize a semiconjugat
 #### Results
 The limited sample size and lack of prior information about the variables in question populations lead to a relatively wide confidence interval using standard frequentist approaches.  Using the Bayesian approach, the confidence interval for the average age of husbands and wives was reduced by over a year.  The confidence interval for the correlation coefficient was reduced by 2% compared to the frequentist.   
 
-After visualizing the relationship, we formed priors for the two variables we are interested in predicting.  Correlation is two-dimensional, so we formulated it following an inverse Wishart distribution, and the mean age for spouses follows a multivariate normal distribution.
+#### Methodology
+After visualizing the relationship between ages of husbands and ages of wives, we formed priors for the two variables we are interested in predicting.  Correlation is two-dimensional, so we formulated it following an inverse Wishart distribution, and the mean age for spouses follows a multivariate normal distribution.
 
 Once we establish our priors, we can generate more data by taking random samples of these distributions.  We confirm our priors and data validity by comparing simulated data scatter plots to the actual data scatter plots.  A moderately strong positive correlation is held for each predictive data set relative to the original.
 

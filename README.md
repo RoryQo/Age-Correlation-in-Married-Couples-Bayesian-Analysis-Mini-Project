@@ -2,7 +2,7 @@
 Using age data from 100 sampled U.S. married couples, hypothesize a semiconjugate prior, generate a predictive data set to confirm the hypothesis, and use Markov Chain Monte Carlo (MCMC) approximation for mean ages and correlation coefficient.
 
 #### Results
-The limited sample size and lack of prior information about the variables in question populations lead to a relatively wide confidence interval using standard frequentist approaches.  Using the Bayesian approach, the confidence interval for the average age of husbands and wives was reduced by over a year.  The confidence interval for the correlation coefficient was reduced by 2% compared to the frequentist.   
+The limited sample size and lack of prior information about the variables in question populations lead to a relatively wide confidence interval using standard frequentist approaches.  Using the Bayesian approach, the confidence interval for the average age of husbands and wives was reduced by over a year, and the confidence interval for the correlation coefficient was reduced by 2% compared to the frequentist (at the same alpha level).   
 
 #### Methodology
 After visualizing the relationship between ages of husbands and ages of wives, we formed priors for the two variables we are interested in predicting.  Correlation is two-dimensional, so we formulated it following an inverse Wishart distribution, and the mean age for spouses follows a multivariate normal distribution.

@@ -14,4 +14,4 @@ After confirming distributions, we use MCMC approximation to estimate the mean c
 #### Data
 The data sampled the age of spouses in 100 sampled U.S. married couples
 + `ageh:` age of husband
-+ `agew"` age of wife
++ `agew:` age of wife

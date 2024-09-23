@@ -1,4 +1,4 @@
-# Ages-in-Marriage-Bayesian-Analysis
+# Age Correlation in Married Couples
 Using age data from 100 sampled U.S. married couples, hypothesize a semiconjugate prior, generate a predictive data set to confirm the hypothesis, and use Markov Chain Monte Carlo (MCMC) approximation for mean ages and correlation coefficient.
 
 #### Results

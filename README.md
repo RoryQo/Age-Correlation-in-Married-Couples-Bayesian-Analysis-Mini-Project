@@ -1,4 +1,4 @@
-# <div align="center">**Age and Marriage Bayesian Analysis**</div>
+# <div align="center">**Age Correlation in Married Couples**</div>
 
 ## Table of Contents
 1. [Overview](#overview)

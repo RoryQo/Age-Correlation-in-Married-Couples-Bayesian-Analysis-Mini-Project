@@ -4,7 +4,7 @@
 1. [Overview](#overview)
 2. [Methodology](#methodology)
 3. [Data](#data)
-4. [Results and Discussion](#results-and-discussion)
+4. [Results](#results)
 
 ## Overview
 This project analyzes the relationship between the ages of husbands and wives using data from 100 sampled U.S. married couples. The goal is to hypothesize a semiconjugate prior, generate a predictive dataset to confirm this hypothesis, and utilize Markov Chain Monte Carlo (MCMC) approximation to estimate the mean ages and the correlation coefficient.
@@ -21,7 +21,7 @@ The dataset comprises the ages of spouses from 100 sampled U.S. married couples:
 - **ageh**: Age of the husband
 - **agew**: Age of the wife
 
-## Results and Discussion
+## Results
 The limited sample size and lack of prior information about the variables led to a relatively wide confidence interval using standard frequentist approaches. In contrast, the Bayesian approach reduced the confidence interval for the average ages of husbands and wives by over a year. The confidence interval for the correlation coefficient was also reduced by 2% compared to the frequentist method (at the same alpha level).
 
 These findings highlight the advantages of Bayesian methods over traditional frequentist approaches, particularly in providing narrower confidence intervals and better estimations of correlations. The ability to leverage prior information significantly enhances the reliability of our analysis regarding age dynamics in marriages.

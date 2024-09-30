@@ -10,7 +10,7 @@
 This project analyzes the relationship between the ages of husbands and wives using data from 100 sampled U.S. married couples. The goal is to hypothesize a semiconjugate prior, generate a predictive dataset to confirm this hypothesis, and utilize Markov Chain Monte Carlo (MCMC) approximation to estimate the mean ages and the correlation coefficient.
 
 ## Methodology
-1. **Hypothesis Formation**: After visualizing the relationship between the ages of husbands and wives, we hypothesize a semiconjugate prior. Specifically, we model the correlation using an inverse Wishart distribution, while the mean ages of spouses follow a multivariate normal distribution.
+1. **Hypothesis Formation**: After visualizing the relationship between the ages of husbands and wives, we hypothesize a semiconjugate prior. Specifically, we model the variation using an inverse Wishart distribution, while the mean ages of spouses follow a multivariate normal distribution.
 
 2. **Predictive Data Generation**: We generate predictive datasets by taking random samples from the established distributions. These datasets help us confirm the validity of our priors by comparing simulated scatter plots to the actual data.
 

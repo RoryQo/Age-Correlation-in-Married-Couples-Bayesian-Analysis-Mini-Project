@@ -15,7 +15,8 @@ This project analyzes the relationship between the ages of husbands and wives us
 2. **Predictive Data Generation**: We generate predictive datasets by taking random samples from the established distributions. These datasets help us confirm the validity of our priors by comparing simulated scatter plots to the actual data. Both follow a strong positive correlation
 
 3. **MCMC Approximation**: Once the distributions are confirmed, we apply MCMC methods to estimate the mean correlation between the ages of husbands and wives. This allows us to create new confidence intervals for average ages and correlations.
-      - ``` # Generate predictive data set (size 100) from
+      - ```
+         # Generate predictive data set (size 100) from
 average ages (theta) and cov matrix (sigma)
 
 n = 100

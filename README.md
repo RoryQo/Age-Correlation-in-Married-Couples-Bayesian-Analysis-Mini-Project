@@ -20,44 +20,30 @@ This project analyzes the relationship between the ages of husbands and wives us
 4. **MCMC Approximation**: Once the distributions are confirmed, we apply MCMC methods to estimate the mean correlation between the ages of husbands and wives. This allows us to create new confidence intervals for average ages and correlations.
 
 ```
-# Generate predictive data set (size 100) from
-average ages (theta) and cov matrix (sigma)
+# MCMC Approximations
 
-n = 100
-
-s = 10
-
-# Mean of ages
-
+#prior
 mu0 <- c(42,42)
+nu0 <- 4
+L0 <- S0 <- matrix(c(150, 112.5, 112.5, 150), nrow = 2, ncol = 2)
 
-L0 <- matrix(c(441, 330.75, 330.75, 441), nrow = 2, ncol = 2)
+ybar <- apply(agehw, 2, mean)
+Sigma <- cov(agehw); n <- dim(agehw)[1]
+THETA<-SIGMA <- NULL
 
-# Mean ages follow multivariate norm
-
-theta <- mvrnorm(s, mu0, L0)
-
-# sample sigmas following inverse wishart distribution
-
-sigmas <- list()
-
-for(i in 1:s){
- sigma <- solve(rWishart(1, 4, solve(L0))[,,1])
-
- sigmas[[i]] <- sigma
-}
-
-# Sample age from multivariate normal distribution
-
-data <- data.frame(h_age= c(), w_age = c(), dataset= c())
-
-for(i in 1:s){
- y <- mvrnorm(100, mu0, L0)
-
- new <- data.frame(h_age = y[,1], w_age = y[,2], dataset =i)
-
- data <- rbind(data, new)
-
+for(s in 1:10000){
+ 
+#Update theta
+ Ln <- solve(solve(L0) + n * solve(Sigma))
+ mun <- Ln %*% (solve(L0) %*% mu0 + n * solve(Sigma) %*% ybar)
+ theta <- mvrnorm(1, mun, Ln)
+ 
+#Update Simga
+ Sn <- S0 + (t(agehw) - c(theta)) %*% t( t(agehw) - c(theta))
+ Sigma <- solve( rWishart(1, nu0 + n, solve(Sn))[,,1])
+ 
+# save results
+ THETA <- rbind(THETA, theta) ; SIGMA <- rbind(SIGMA, c(Sigma))
 }
 ```
 
